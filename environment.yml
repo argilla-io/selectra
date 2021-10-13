@@ -1,0 +1,28 @@
+name: selectra
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python~=3.6.0
+  - pip>=20.3.0
+  # for building jupyterlab extensions ... :)
+  - nodejs
+  - pip:
+      # python 3.6.0 (needed for the electra scripts) does not allow the newest ipython version, and jedi 0.18.0 is incompatible with older versions, so we need to use an older jedi version:
+      - jedi==0.17.2
+      - tensorflow==1.15.5
+      - numpy
+      - transformers
+      - datasets
+      - jupyterlab
+      - ipywidgets
+      - scikit-learn
+      - sklearn
+      - google-api-python-client
+      - oauth2client
+      # to transform tf to hf pytorch
+      - torch
+      # for the conll metrics
+      - seqeval
