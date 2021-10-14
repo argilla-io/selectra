@@ -10,4 +10,4 @@ python /home/recognai/selectra/electra/build_pretraining_dataset.py \
 	--blanks-separate-docs True \
 	--max-seq-length 512 \
 	--num-processes 8 \
-        --no-lower-case
+	--no-lower-case
