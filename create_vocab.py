@@ -19,8 +19,10 @@ output_folder = Path(OUTPUT)
 output_folder.mkdir()
         
 # Select files for training
-files = list(map(str, path.glob("file*.txt")))
-files = files[:int(len(files)*CORPUS_FRAC)]
+files = sorted(list(map(str, path.glob("file*.txt"))))
+nr_of_files_for_vocab = int(len(files)*CORPUS_FRAC)
+random.seed(43)
+files = random.sample(files, nr_of_files_for_vocab)
 
 # save list of files
 with (output_folder / "file_list.txt").open("w") as f:
