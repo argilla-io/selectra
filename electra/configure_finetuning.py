@@ -48,7 +48,8 @@ class FinetuningConfig(object):
         if "model_hparam_overrides" in kwargs else {})
     self.embedding_size = None  # bert hidden size by default
     self.vocab_size = 30522  # number of tokens in the vocabulary
-    self.do_lower_case = True
+    self.do_lower_case = False
+    self.strip_accents = False
 
     # training
     self.learning_rate = 1e-4
