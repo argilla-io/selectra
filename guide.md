@@ -19,7 +19,7 @@ In the following we provide detailed steps to reproduce our models with gcloud.
 - mount the external 1TB disk under '/home/recognai/disk' (`sudo mount /dev/<HD-id> /home/recognai/disk`)
 - install git (`sudo apt update; sudo apt install git`)
 - install miniconda (`wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh; bash Miniconda3-latest-Linux-x86_64.sh`)
-- clone selectra repo (`git clone https://github.com/recognai/selectra.git`) 
+- clone selectra repo (`git clone https://github.com/argilla-io/selectra.git`) 
 - create and activate conda env (`cd selectra; conda env create; conda activate selectra`)
 - set env var for HF cache (`export HF_HOME=/home/recognai/disk/huggingface`), put in the bashrc. This is important since the oscar data set is huge and only fits on the external disk.
 - execute the download script in a screen session (`python download_oscar.py`), this will take some time (hours).
